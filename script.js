@@ -46,15 +46,37 @@ function start() {
 
 start();
 
-const personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: false
-};
+let personalMovieDB;
 
+function showMyDB() {
+  personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+  };
 
+  if (personalMovieDB.privat =! false) {
+    console.log(numberOfFilms);
+  }
+}
+
+showMyDB();
+
+function writeYourGenres() {
+  for (let i = 0; i < 3; i++) {
+    const a = prompt(`Ваш любимый жанр под номером ${0}`, '');
+
+    if (a != null && a != '' && a.length < 30) {
+      personalMovieDB.genres[a];
+      console.log('Done')
+    }
+  }
+
+}
+
+writeYourGenres();
 
 /* Задание на урок:
 
